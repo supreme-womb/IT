@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Contact US at ABC</title>
+	<script>
+		function validate() {
+			var purpose=document.myform.purpose.value;
+			var company=document.myform.Company.value;
+		var name=document.myform.name.value;
+		var zip=document.myform.Zip.value;
+		var phone=document.myform.phone.value;
+		var email=document.myform.Email.value;
+
+
+
+		if( purpose == "" ){
+			alert( "Please provide the reason!" ); 
+			document.myform.purpose.focus();
+			return false;
+		}
+		if( company== ""){
+			alert( "Please provide your Company Name!" ); 
+			document.myform.Company.focus();
+			return false;
+		}
+		if (name == "") {
+			alert("Please provide your name!");
+			document.myform.purpose.focus();
+			return false;
+		}
+		if( zip== "" || isNaN( document.myform.Zip.value ) || document.myform.Zip.value.length != 5){
+			alert( "Please provide a zip in the format ##### !" ); 
+			document.myform.Zip.focus();
+			return false;
+		}
+		if( phone== "" || isNaN( document.myform.phone.value == ) || document.myform.phone.value.length !=10) {
+			alert( "Please provide your country!" );
+			document.myform.phone.focus();
+			return false; 
+		}
+		if (email == "") {
+			alert("Please provide your E-mail address!");
+			document.myform.E-mail.focus();
+			return false;
+		}
+		else{
+			alert("We will contact you soon regarding your querry");
+			return true;
+		}
+	}
+
+	validate();
+	</script>
+</head>
+<body>
+	<nav class="topnavigation" align="right">
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<div class="services">
+			<a href="#">Services</a>
+			<div class="services-content">
+				<ul style="list-style-type: none;">
+					<li><a href="design.html">Web-Designing</a></li>
+					<li><a href="#">E-commerce</a></li>
+					<li><a href="#">Data Security</a></li>
+				</ul>
+			</div>
+		</div>
+			<a href="gallery.html">Photo Gallery</a>
+			<a href="contact.html">Contact Us</a>
+	</nav>
+	<div class="box">
+		<form action="index.html" method="post" name="myform" onsubmit="return validate()">
+			<fieldset class="contact-box" style="color: #d9800b; border-color: #d9800b; z-index: -1;">
+				<img src="12.jpg" alt="contact-us" width="50%" style="position:relative; z-index: -1; " align="right">
+				<legend align="right" style="font-size: 24px; color: #d9800b;"><fieldset style="z-index: -1;"><b>CONTACT US</b></fieldset></legend>
+				
+				<table cellspacing="10" cellpadding="0">
+					<tr>
+						<td>Purpose</td>
+						<td><input type="text" name="Purpose"></td>
+					</tr>
+					<tr>
+						<td>Company Name</td>
+						<td><input type="text" name="Company"></td>
+					</tr>
+					<tr>
+						<td>Your Name</td>
+						<td><input type="text" name="name"></td>
+					</tr>
+					<tr>
+						<td>Zip Code</td>
+						<td><input type="text" name="Zip"></td>
+					</tr>
+					<tr>
+						<td>Phone Number</td>
+						<td><input type="text" name="phone"></td>
+					</tr>
+					<tr>
+						<td>E-mail ID</td>
+						<td><input type="text" name="Email"></td>
+					</tr>
+					<tr>
+						<td><label>Message</label></td>
+						<td rowspan="" colspan=""><textarea></textarea></td>
+					</tr>
+					<tr align="right">
+						<td><input type="submit" value="Submit"></td>
+						<td><input type="reset" value="Clear"></td>
+					</tr>
+				</table>
+
+			</fieldset>
+		</form>
+	</div>
+	<div class="contact-content">If you have further queries, mail us at:<a href = "info@thebritishcollege.edu.np">info@thebritishcollege.edu.np</a></div>
+	<div class="footer-content">
+		<a href="http://nepalcopyright.gov.np/ne/"  target="_blank">Copyright</a>&copy;2021 ABC IT Group<br><hr>
+		<a href="index.html">ABC IT Consultancy</a><br>
+		Baluwatar, Kathmandu<br>
+		Phone: 01-4444444, +977-9851111111<br>
+	</div>
+</body>
+</html>

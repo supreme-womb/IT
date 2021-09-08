@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Computation on Array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var array = [1, 2, 3, 4, 5, 6];
+    	var s = 0;
+    	var m = 1;
+		for (var i = 0; i < array.length; i += 1){
+    		s += array[i];
+    		m *= array[i];
+    	}
+		alert("Sum: "+s+ " Product: " +m);
+	</script>
+</body>
+</html>
